@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palmeiras - Site do Verdão</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f2f2f2;
+}
+
+header{
+background:#0b5e2a;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+nav{
+background:#083f1d;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#a5ffb5;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:8px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+color:#0b5e2a;
+margin-bottom:10px;
+}
+
+img{
+width:100%;
+border-radius:6px;
+margin-top:10px;
+}
+
+ul{
+margin-left:20px;
+}
+
+button{
+background:#0b5e2a;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+font-size:16px;
+}
+
+button:hover{
+background:#0e7a3a;
+}
+
+footer{
+background:#083f1d;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Sociedade Esportiva Palmeiras</h1>
+<p>História, títulos e curiosidades do Verdão</p>
+</header>
+
+<nav>
+<a href="#historia">História</a>
+<a href="#titulos">Títulos</a>
+<a href="#jogadores">Jogadores</a>
+<a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<div class="container">
+
+<div class="card" id="historia">
+<h2>História</h2>
+
+<p>
+O Palmeiras foi fundado em 1914 com o nome de Palestra Itália por imigrantes italianos.
+Em 1942 o clube passou a se chamar Sociedade Esportiva Palmeiras.
+Ao longo da história se tornou um dos clubes mais vitoriosos do Brasil e da América do Sul.
+</p>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Allianz_Parque.jpg">
+
+</div>
+
+<div class="card" id="titulos">
+
+<h2>Principais Títulos</h2>
+
+<ul>
+<li>Libertadores: 1999, 2020, 2021</li>
+<li>Campeonato Brasileiro: 12 títulos</li>
+<li>Copa do Brasil: 4 títulos</li>
+<li>Supercopa do Brasil: 2023</li>
+<li>Paulistão: mais de 25 títulos</li>
+</ul>
+
+</div>
+
+<div class="card" id="jogadores">
+
+<h2>Jogadores Históricos</h2>
+
+<ul>
+<li>Ademir da Guia</li>
+<li>Marcos</li>
+<li>Dudu</li>
+<li>Evair</li>
+<li>Rivaldo</li>
+</ul>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Allianz_Parque_Palmeiras.jpg">
+
+</div>
+
+<div class="card" id="curiosidades">
+
+<h2>Curiosidade do Palmeiras</h2>
+
+<p id="curiosidade">
+Clique no botão para descobrir uma curiosidade.
+</p>
+
+<button onclick="mostrarCuriosidade()">
+Mostrar Curiosidade
+</button>
+
+</div>
+
+</div>
+
+<footer>
+<p>Site sobre o Palmeiras 💚</p>
+</footer>
+
+<script>
+
+function mostrarCuriosidade(){
+
+const curiosidades = [
+
+"O Palmeiras conquistou a Libertadores duas vezes seguidas: 2020 e 2021.",
+
+"O Allianz Parque é considerado um dos estádios mais modernos da América Latina.",
+
+"O Palmeiras é o maior campeão do Campeonato Brasileiro.",
+
+"A torcida do Palmeiras é uma das maiores do Brasil.",
+
+"O clube foi fundado em 1914."
+
+];
+
+let numero = Math.floor(Math.random()*curiosidades.length);
+
+document.getElementById("curiosidade").innerText = curiosidades[numero];
+
+}
+
+</script>
+
+</body>
+</html>
